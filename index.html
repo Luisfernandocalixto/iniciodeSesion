@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="shortcut icon" href="./img/Instagram.svg" type="image/x-icon">
+    <style>
+        .navbar span {
+            color: gray;
+            padding: 10px;
+
+        }
+
+        .cambia {
+            background-image: url('./img/imagen4.png');
+            height: 600px;
+            background-repeat: no-repeat;
+            position: relative;
+            top: 28px;
+            left: 155px;
+            transition: 5s;
+
+            animation-name: animate;
+            animation-direction: reverse;
+            animation-duration: 15s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+            animation-timing-function: ease-in-out;
+
+        }
+
+        @keyframes animate {
+
+            0% {
+                background-image: url('./img/imagen4.png');
+            }
+
+            33% {
+                background-image: url('./img/imagen3.png');
+            }
+
+            66% {
+                background-image: url('./img/imagen2.png');
+            }
+
+            99% {
+                background-image: url('./img/imagen1.png');
+            }
+
+        }
+
+        input {
+            all: unset;
+            padding: 11px;
+            border: 1px solid rgb(219, 219, 219);
+            margin-top: 10px;
+            background-color: rgb(250, 250, 250);
+            border-radius: 5px;
+            font-size: 12px;
+            width: 250px;
+
+        }
+
+        input:focus,
+        input:active {
+            border: 1px solid rgba(38, 38, 38, 0.4);
+        }
+
+        * {
+            font-family: -apple-system, system-ui, -apple-system, 'system-ui', 'Segoe UI', Roboto, Arial, Helvetica, sans-serif !important;
+        }
+
+        #mostrar {
+            padding: 5px;
+            margin: 5px;
+            position: absolute;
+            height: 60%;
+            top: 60%;
+            right: 8px;
+            transform: translateY(-50%);
+            font-weight: 500;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body style="background-color: #fafafa; height: 100vh; margin: 0;">
+
+    <div style="display: flex; flex-direction: row; flex-wrap: nowrap; align-content: center; justify-content: center; align-items: center;
+        height: 100%;">
+
+        <div class="left" style="height: 700px; width: 430px; background-image: url('./img/fondoInst.png'); background-repeat: no-repeat;
+            transform: scale(1);
+            margin-right: 40px;">
+
+            <div class="cambia">
+
+            </div>
+
+        </div>
+
+        <div class="right" style="margin-top: -70px;">
+
+            <div>
+                <div style="display: flex; flex-direction: column; flex-wrap: nowrap; align-content: center; align-items: stretch; justify-content: center; width: 350px;
+                background-color: white; 
+                border: 1px solid rgb(219, 219, 219); 
+                font-family: -apple-system; 
+                padding: 40px 5px 40px 5px;
+                margin: 20px;">
+
+                    <img src="./img/logo instagram.png" alt=""
+                        style="height: 50px; padding: 0px 70px 30px 70px; object-fit: contain;">
+                    <div style="display: grid; justify-content: center;">
+
+                        <input type="text" placeholder="Teléfono, usuario o correo electrónico">
+                        <div style="display: flex; position: relative;">
+                            <input type="text" placeholder="Contraseña" id="contraseña">
+                            <span id="mostrar">Mostrar</span>
+                        </div>
+                        <button style="background-color: rgba(81, 184, 253, 0.873); border: none;
+                text-align: center;
+                color: white;
+                margin-top: 10px;
+                border-radius: 10px;
+                padding: 10px; 
+                font-weight: 700;
+                cursor: pointer;
+                ">Iniciar sesión</button>
+                    </div>
+
+                    <div style="display: flex; margin-top: 30px; flex-direction: row; align-items: center;">
+
+                        <div style=" background-color: rgb(219, 219, 219);
+                height: 1px;
+                width: 140px;">
+
+                        </div>
+                        <div style="font-weight: 600;
+                color: gray;
+                padding: 0px 20px 0px 20px;">O</div>
+                        <div style=" background-color: rgb(219, 219, 219);
+                height: 1px;
+                width: 140px;">
+
+                        </div>
+
+                    </div>
+
+                    <div style="text-align: center;
+                margin-top: 20px;
+                color: rgb(56, 81, 133);
+                font-weight: 600;
+                font-size: 18px; 
+                align-items: center;
+                vertical-align: top;
+                ">
+
+                        <span style="
+                    display: inline-block;
+                    margin-right: 8px;
+                    position: relative;
+                    top: 1px;
+                    height: 16px;
+                    width: 16px;
+
+                    background-image: url('/img/iconFacebook.svg');
+                    background-repeat: no-repeat;
+                    background-position: -414px -259px;
+                    transform: scale(1.2);">
+                            <img src="./img/iconFacebook.svg" alt="">
+                        </span>
+                        <span style="cursor: pointer;">
+                            Iniciar sesión con Facebook
+                        </span>
+
+                    </div>
+
+                    <div style="color: rgb(0, 55, 107);
+                text-align: center;
+                padding-top: 20px;
+                cursor: pointer;">
+                        ¿Olvidaste tu contraseña?
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+            <div style="background-color: white;
+            border: 1px solid rgb(219, 219, 219);
+            text-align: center;
+            padding: 20px;
+            margin: 20px;">
+                ¿No tienes una cuenta? <span style="color: rgba(0, 149, 246, 1);
+                font-weight: 600; cursor: pointer;"> Regístrate </span>
+            </div>
+
+            <div style="text-align: center;">Descarga la app.</div>
+            <div style="text-align: center; margin-top: 20px;">
+                <img src="./img/googlePlay.png" alt="" style="width: 120px; cursor: pointer;">
+                <img src="./img/Microsoft.png" alt="" style="width: 100px; cursor: pointer;">
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+    <div style="height: 10%; margin-top: -3%; font-size: 12px;">
+
+        <div style="display: flex; flex-direction: row; flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        max-width: 1200px;
+        margin: auto; cursor: pointer;" class="navbar">
+            <span> Meta </span>
+            <span>Información </span>
+            <span> Blog</span>
+            <span> Empleo</span>
+            <span> Ayuda</span>
+            <span>API </span>
+
+            <span> Privacidad</span>
+            <span>Condiciones</span>
+            <span>Ubicaciones</span>
+            <span> Instagram Lite</span>
+            <span> Threads</span>
+            <span> Subir contactos y no usuarios</span>
+            <span> Meta Verified</span>
+            <span> Español</span>
+
+        </div>
+
+        <div style="text-align: center; color: gray; padding: 10px;"> Español© 2023 Instagram from Meta</div>
+
+    </div>
+
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
